@@ -1,0 +1,33 @@
+body {
+  width: 240px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+ul.counters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 0 1px 0;
+    padding: 10px;
+    color: #9E8989;
+    background-color: #FCEDD6;
+    border-left: 5px solid #937D7D;
+
+    &:nth-child(odd) {
+      background-color: #F9F1E6;
+      color: #655656;
+    }
+
+    &:hover {
+      border-color: #655656;
+    }
+
+    .actions {
+      float: right;
+    }
+  }
+}
