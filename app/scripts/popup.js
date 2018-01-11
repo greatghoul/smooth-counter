@@ -3,22 +3,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Counter from './components/counter';
 
 const counters = [
-  { name: 'test 1', count: 33 },
-  { name: 'test 2', count: 112 },
+  { name: 'Project 1', count: 33, updatedAt: '3 days ago' },
+  { name: 'Project 2', count: 112, updatedAt: 'A few seconds ago' },
 ];
 
-function Counter (props) {
-  return <li>
-    <span class="actions">{props.count}</span>
-    <span class="name">{props.name}</span>
-  </li>;
-}
-
-var counterItems = counters.map(counter => Counter(counter));
+var counterItems = counters.map(counter => <Counter key={counter.name} counter={counter} />);
 
 ReactDOM.render(
-  <ul class="counters">{counterItems}</ul>,
+  <ul className="counters">{counterItems}</ul>,
   document.getElementById('app')
 );
