@@ -6,18 +6,19 @@
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
-    "128": "images/icon-128.png"
+    "128": "img/icon-128.png"
   },
   "background": {
     "scripts": [
-      "scripts/background.js"
+      "js/background.js"
     ]
   },
   "browser_action": {
     "default_icon": {
-      "128": "images/icon-128.png"
+      "128": "img/icon-128.png"
     },
     "default_title": "__MSG_browserActionTitle__",
-    "default_popup": "pages/popup.html"
-  }
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

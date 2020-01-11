@@ -4,11 +4,21 @@ import FaClockO from 'react-icons/lib/fa/clock-o';
 import FaCog from 'react-icons/lib/fa/cog';
 
 export default class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {counter: props.counter};
+  }
+
+  increase(step) {
+    console.log(this.props.counter);
+    this.props.counter.count += step;
+  }
+
   render() {
     return <li className="counter">
     <div className="counter-actions">
-      <a href="#" data-action="inc">+</a>
-      <a href="#" data-action="dec">-</a>
+      <a href="#" data-action="inc" onClick={this.increase.bind(this, 1)}>+</a>
+      <a href="#" data-action="dec" onClick={this.increase.bind(this, -1)}>-</a>
     </div>
     
     <div className="counter-heading">
