@@ -2,16 +2,18 @@ Ractive({
   target: '#app',
   template: `
     <header>
-      <button on-click="@this.set('showNew', true)">New</button>
-    </header>
+      <div>
+        <button on-click="@this.set('showNew', true)">New</button>
+      </div>
 
-    {{#if showNew}}
-      <form class="form-new" on-submit="counterCreate">
-        <input name="name" type="text" value="{{nameNew}}" />
-        <button type="submit">Create</button>
-        <button type="button" on-click="@this.set('showNew', false)">Cancel</button>
-      </form>
-    {{/if}}
+      {{#if showNew}}
+        <form class="form-new" on-submit="counterCreate">
+          <input name="name" type="text" value="{{nameNew}}" />
+          <button type="submit" disabled="{{!nameNewStripped}}">✔</button>
+          <button type="button" on-click="@this.set('showNew', false)">✘</button>
+        </form>
+      {{/if}}
+    </header>
 
     <ul class="counters">
       {{#each counters: i}}
@@ -32,6 +34,11 @@ Ractive({
     showNew: false,
     nameNew: '',
     counters: []
+  },
+  computed: {
+    nameNewStripped () {
+      return this.get('nameNew').replace(/(^\s+|\s+$)/, '')
+    }
   },
   updateCount (i, step) {
     const counters = this.get('counters')

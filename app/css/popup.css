@@ -1,112 +1,125 @@
 body {
-   width: 240px;
-   min-height: 30px;
-   margin: 0;
-   padding: 0;
+  width: 240px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.panel-new {
-   display: flex;
+header {
+  padding: 5px;
+  background: #ab8858;
+}
+
+.form-new {
+  display: flex;
+  margin-top: 5px;
+}
+
+.form-new input {
+   flex: 1;
+}
+.form-new button {
+   margin-left: 5px;
 }
 
 .counters {
-   list-style: none;
-   margin: 0;
-   padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .counter {
-   margin: 0 0 1px 0;
-   padding: 0;
-   color: #9e8989;
-   background-color: #fcedd6;
-   border-left: 5px solid #937d7d;
-   height: 50px;
-   display: flex;
+  margin: 0 0 1px 0;
+  padding: 0;
+  color: #9e8989;
+  background-color: #fcedd6;
+  border-left: 5px solid #937d7d;
+  height: 50px;
+  display: flex;
 }
 
 .counter:nth-child(odd) {
-   background-color: #f9f1e6;
-   color: #655656;
+  background-color: #f9f1e6;
+  color: #655656;
 }
 
 .counter:hover {
-   border-color: #655656;
+  border-color: #655656;
 }
 
 .counter .counter-heading {
-   height: 30px;
-   padding-left: 10px;
-   padding-right: 10px;
-   flex: 1;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1;
 }
 
 .counter .counter-heading .counter-name {
-   line-height: 30px;
-   font-weight: 600;
+  line-height: 30px;
+  font-weight: 600;
 }
 
 .counter .counter-heading .counter-count {
-   float: right;
-   line-height: 30px;
-   font-weight: 600;
-   color: #3b96cc;
+  float: right;
+  line-height: 30px;
+  font-weight: 600;
+  color: #3b96cc;
 }
 
 .counter .counter-footer {
-   height: 20px;
-   padding-left: 10px;
-   padding-right: 10px;
-   margin-right: 30px;
+  height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 30px;
 }
 
 .counter .counter-footer .counter-time {
-   color: #bcbbbe;
+  color: #bcbbbe;
 }
 
 .counter .counter-footer .counter-menu {
-   display: none;
-   float: right;
-   color: #bcbbbe;
-   display: none;
+  display: none;
+  float: right;
+  color: #bcbbbe;
+  display: none;
 }
 
 .counter:hover .counter-menu {
-   display: block;
-   cursor: pointer;
+  display: block;
+  cursor: pointer;
 }
 
 .counter .counter-actions {
-   flex: 0 0 30px;
+  flex: 0 0 30px;
 }
 
 .counter .counter-actions a {
-   outline: none;
-   display: block;
-   text-align: center;
-   text-decoration: none;
-   font-weight: 800;
-   cursor: pointer;
+  outline: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .action-inc {
-   height: 30px;
-   line-height: 30px;
-   background-color: #20c584;
-   color: #198d60;
+  height: 30px;
+  line-height: 30px;
+  background-color: #20c584;
+  color: #198d60;
 }
 
 .action-inc:hover {
-   background-color: #26ad78;
+  background-color: #26ad78;
 }
 
 .action-dec {
-   height: 20px;
-   line-height: 20px;
-   background-color: #f8f8f8;
-   color: #bcbbbe;
+  height: 20px;
+  line-height: 20px;
+  background-color: #f8f8f8;
+  color: #bcbbbe;
 }
 
 .action-dec:hover {
-   background-color: #dcdcdc;
+  background-color: #dcdcdc;
 }
