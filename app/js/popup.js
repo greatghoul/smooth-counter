@@ -24,7 +24,15 @@ Ractive({
               <span class="counter-name">{{name}}&nbsp;</span>
             </div>
             <div class="counter-meta">
-              <span><a class="action-del" title="Delete">✘ Delete</a></span>
+              <span>
+                <a
+                  class="action-del"
+                  title="Delete"
+                  on-click="@this.deleteCounter(i)"
+                >
+                  ✘ Delete
+                </a>
+              </span>
             </div>
           </div>
           <div class="counter-actions">
@@ -51,6 +59,12 @@ Ractive({
     counter.count += step
     this.set('counters', counters)
     localStorage[`counter.${counter.id}`] = JSON.stringify(counter)
+  },
+  deleteCounter (i) {
+    const counters = this.get('counters')
+    const counter = counters[i]
+    localStorage.removeItem(`counter.${counter.id}`)
+    this.splice('counters', i)
   },
   on: {
     init () {
