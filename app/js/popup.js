@@ -18,9 +18,14 @@ Ractive({
     <ul class="counters">
       {{#each counters: i}}
         <li class="counter">
-          <div class="counter-heading">
-            <span class="counter-count">{{count}}</span>
-            <span class="counter-name">{{name}}</span>
+          <div class="counter-body">
+            <div class="counter-heading">
+              <span class="counter-count">{{count}}</span>
+              <span class="counter-name">{{name}}&nbsp;</span>
+            </div>
+            <div class="counter-meta">
+              <span><a class="action-del" title="Delete">✘ Delete</a></span>
+            </div>
           </div>
           <div class="counter-actions">
             <a class="action-inc" on-click="@this.updateCount(i, 1)">+</a>

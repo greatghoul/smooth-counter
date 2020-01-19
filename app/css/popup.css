@@ -47,19 +47,19 @@ header {
   border-color: #655656;
 }
 
-.counter .counter-heading {
+.counter-body {
   height: 30px;
   padding-left: 10px;
   padding-right: 10px;
   flex: 1;
 }
 
-.counter .counter-heading .counter-name {
+.counter-name {
   line-height: 30px;
   font-weight: 600;
 }
 
-.counter .counter-heading .counter-count {
+.counter-count {
   float: right;
   line-height: 30px;
   font-weight: 600;
@@ -122,4 +122,18 @@ header {
 
 .action-dec:hover {
   background-color: #dcdcdc;
+}
+
+.action-del {
+  cursor: pointer;
+  color: #999;
+  display: none;
+}
+
+.counter-body:hover .action-del {
+  display: inline;
+}
+
+.action-del:hover {
+  color: #555;
 }
