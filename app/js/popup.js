@@ -58,6 +58,7 @@ Ractive({
     const counter = counters[i]
     counter.count += step
     this.set('counters', counters)
+    navigator.clipboard.writeText(counter.count)
     localStorage[`counter.${counter.id}`] = JSON.stringify(counter)
   },
   deleteCounter (i) {
